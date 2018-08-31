@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { ClubinfoComponent } from './clubinfo/clubinfo.component';
 import { JuniorsailingComponent } from './juniorsailing/juniorsailing.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { SundayRacesComponent } from './gallery/sundayraces.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { ContactsComponent } from './contacts/contacts.component';
     HomeComponent,
     ClubinfoComponent,
     JuniorsailingComponent,
-    ContactsComponent
+    ContactsComponent,
+    GalleryComponent,
+    SundayRacesComponent
   ],
   imports: [
     NgbModule.forRoot(),
