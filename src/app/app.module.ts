@@ -10,6 +10,7 @@ import { JuniorsailingComponent } from './juniorsailing/juniorsailing.component'
 import { ContactsComponent } from './contacts/contacts.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { SundayRacesComponent } from './gallery/sundayraces.component';
+import { GalleryCaroselComponent } from './gallery/gallarycarosel.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SundayRacesComponent } from './gallery/sundayraces.component';
     JuniorsailingComponent,
     ContactsComponent,
     GalleryComponent,
-    SundayRacesComponent
+    SundayRacesComponent,
+    GalleryCaroselComponent
   ],
   imports: [
     NgbModule.forRoot(),

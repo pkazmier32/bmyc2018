@@ -10,7 +10,11 @@ export class GalleryCaroselComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-      document.getElementById("body").classList.remove("jumbotron");
+     // document.getElementById("body").classList.remove("jumbotron");
+    // var elements = document.getElementsByClassName("jumbotron");
+    //while(elements.length > 0){
+    //    elements[0].parentNode.removeChild(elements[0]);
+    //}
   }
 
 }

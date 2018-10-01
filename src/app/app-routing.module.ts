@@ -6,13 +6,15 @@ import { ClubinfoComponent } from './clubinfo/clubinfo.component';
 import { JuniorsailingComponent } from './juniorsailing/juniorsailing.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { SundayRacesComponent } from './gallery/sundayraces.component';
+import { GalleryCaroselComponent } from './gallery/gallarycarosel.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'clubinfo', component: ClubinfoComponent },
   { path: 'juniorsailing', component: JuniorsailingComponent },
   { path: 'gallery', component: GalleryComponent },
-  { path: 'sundayraces', component: SundayRacesComponent }
+  { path: 'sundayraces', component: SundayRacesComponent },
+  { path: 'imagecarosel', component: GalleryCaroselComponent}
 ];
 
 @NgModule({
