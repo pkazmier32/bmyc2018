@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +14,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { SundayRacesComponent } from './gallery/sundayraces.component';
 import { GalleryCaroselComponent } from './gallery/gallarycarosel.component';
+import { BmyccalendarComponent } from './bmyccalendar/bmyccalendar.component';
 
 
 @NgModule({
@@ -22,12 +26,18 @@ import { GalleryCaroselComponent } from './gallery/gallarycarosel.component';
     ContactsComponent,
     GalleryComponent,
     SundayRacesComponent,
-    GalleryCaroselComponent
+    GalleryCaroselComponent,
+    BmyccalendarComponent
   ],
   imports: [
     NgbModule.forRoot(),
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

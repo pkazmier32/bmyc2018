@@ -7,6 +7,7 @@ import { JuniorsailingComponent } from './juniorsailing/juniorsailing.component'
 import { GalleryComponent } from './gallery/gallery.component';
 import { SundayRacesComponent } from './gallery/sundayraces.component';
 import { GalleryCaroselComponent } from './gallery/gallarycarosel.component';
+import { BmyccalendarComponent } from './bmyccalendar/bmyccalendar.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'juniorsailing', component: JuniorsailingComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'sundayraces', component: SundayRacesComponent },
-  { path: 'imagecarosel', component: GalleryCaroselComponent}
+  { path: 'imagecarosel', component: GalleryCaroselComponent},
+  { path: 'bmyccalendar', component: BmyccalendarComponent}
 ];
 
 @NgModule({
