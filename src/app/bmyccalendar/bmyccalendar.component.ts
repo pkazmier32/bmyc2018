@@ -1,4 +1,5 @@
 import {  Component,  ChangeDetectionStrategy,  ViewChild,  TemplateRef, OnInit} from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import {  startOfDay,  endOfDay,  subDays,  addDays,  endOfMonth,  isSameDay,  isSameMonth,  addHours} from 'date-fns';
 import { Subject } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -104,6 +105,13 @@ export class BmyccalendarComponent implements OnInit {
         afterEnd: true
       },
       draggable: true
+    },
+    {
+      start: (new Date('February 4, 2019 19:00:00 -0700')),
+      end: (new Date('February 4, 2019 21:00:00 -0700')),
+      title: 'BMYC Officers Meeting ',
+      color: colors.yellow,
+      actions: this.actions
     }
   ];
 

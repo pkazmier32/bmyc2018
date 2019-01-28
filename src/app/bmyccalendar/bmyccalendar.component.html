@@ -1,19 +1,21 @@
 
 <ng-template #modalContent let-close="close">
   <div class="modal-header">
-    <h5 class="modal-title">Event action occurred</h5>
+    <!-- <h5 class="modal-title">Event action occurred</h5> -->
+    <h5 class="modal-title">{{modalData?.event.title}}</h5>
     <button type="button" class="close" (click)="close()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    <div>
+    <!--<div>
       Action:
       <pre>{{ modalData?.action }}</pre>
-    </div>
+    </div> -->
     <div>
       Event:
       <pre>{{ modalData?.event | json }}</pre>
+      <pre>{{modalData?.event.start}}</pre>
     </div>
   </div>
   <div class="modal-footer">
@@ -91,6 +93,8 @@
     [viewDate]="viewDate"
     [events]="events"
     [refresh]="refresh"
+    [dayStartHour]="9"
+    [dayEndHour]="22"
     (eventClicked)="handleEvent('Clicked', $event.event)"
     (eventTimesChanged)="eventTimesChanged($event)">
   </mwl-calendar-week-view>
@@ -98,6 +102,8 @@
     *ngSwitchCase="CalendarView.Day"
     [viewDate]="viewDate"
     [events]="events"
+    [dayStartHour]="9"
+    [dayEndHour]="22"
     [refresh]="refresh"
     (eventClicked)="handleEvent('Clicked', $event.event)"
     (eventTimesChanged)="eventTimesChanged($event)">
@@ -106,6 +112,7 @@
 
 <br><br><br>
 
+<!--
 <h3>
   Edit events
   <button
@@ -157,9 +164,6 @@
           mwlFlatpickr
           [(ngModel)]="event.start"
           (ngModelChange)="refresh.next()"
-          [altInput]="true"
-          [convertModelValue]="true"
-          [enableTime]="true"
           dateFormat="Y-m-dTH:i"
           altFormat="F j, Y H:i"
           placeholder="Not set">
@@ -171,9 +175,6 @@
           mwlFlatpickr
           [(ngModel)]="event.end"
           (ngModelChange)="refresh.next()"
-          [altInput]="true"
-          [convertModelValue]="true"
-          [enableTime]="true"
           dateFormat="Y-m-dTH:i"
           altFormat="F j, Y H:i"
           placeholder="Not set">
@@ -189,3 +190,4 @@
   </tbody>
 
 </table>
+-->
