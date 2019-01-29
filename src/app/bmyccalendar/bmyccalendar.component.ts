@@ -32,6 +32,7 @@ const colors: any = {
 })
 export class BmyccalendarComponent implements OnInit {
 
+
   ngOnInit() {
   }
 
@@ -69,50 +70,175 @@ export class BmyccalendarComponent implements OnInit {
 
   events: CalendarEvent[] = [
     {
-      start: subDays(startOfDay(new Date()), 1),
-      end: addDays(new Date(), 1),
-      title: 'A 3 day event',
+      start: (new Date('July 6, 2019')),
+      end: (new Date('July 7, 2019')),
+      title: 'Norm Tanner Invitational Regatta',
       color: colors.red,
       actions: this.actions,
-      allDay: true,
-      resizable: {
-        beforeStart: true,
-        afterEnd: true
-      },
-      draggable: true
-    },
-    {
-      start: startOfDay(new Date()),
-      title: 'An event with no end date',
-      color: colors.yellow,
-      actions: this.actions
-    },
-    {
-      start: subDays(endOfMonth(new Date()), 3),
-      end: addDays(endOfMonth(new Date()), 3),
-      title: 'A long event that spans 2 months',
-      color: colors.blue,
       allDay: true
-    },
-    {
-      start: addHours(startOfDay(new Date()), 2),
-      end: new Date(),
-      title: 'A draggable and resizable event',
-      color: colors.yellow,
-      actions: this.actions,
-      resizable: {
-        beforeStart: true,
-        afterEnd: true
-      },
-      draggable: true
     },
     {
       start: (new Date('February 4, 2019 19:00:00 -0700')),
       end: (new Date('February 4, 2019 21:00:00 -0700')),
       title: 'BMYC Officers Meeting ',
       color: colors.yellow,
+      actions: this.actions,
+      meta: 'Bakers home'
+    },
+    {
+      start: (new Date('March 4, 2019 19:00:00 -0700')),
+      end: (new Date('March 4, 2019 21:00:00 -0700')),
+      title: 'BMYC Officers Meeting ',
+      color: colors.yellow,
+      actions: this.actions,
+      meta: 'Bakers home'
+    },
+    {
+      start: (new Date('April 1, 2019 19:00:00 -0600')),
+      end: (new Date('April 1, 2019 21:00:00 -0600')),
+      title: 'BMYC Officers Meeting ',
+      color: colors.yellow,
+      actions: this.actions,
+      meta: 'Bakers home'
+    },
+    {
+      start: (new Date('May 6, 2019 19:00:00 -0600')),
+      end: (new Date('May 6, 2019 21:00:00 -0600')),
+      title: 'BMYC Officers Meeting ',
+      color: colors.yellow,
+      actions: this.actions,
+      meta: 'Bakers home'
+    },
+    {
+      start: (new Date('June 3, 2019 19:00:00 -0600')),
+      end: (new Date('June 3, 2019 21:00:00 -0600')),
+      title: 'BMYC Officers Meeting ',
+      color: colors.yellow,
+      actions: this.actions,
+      meta: 'Bakers home'
+    },
+    {
+      start: (new Date('July 1, 2019 19:00:00 -0600')),
+      end: (new Date('July 1, 2019 21:00:00 -0600')),
+      title: 'BMYC Officers Meeting ',
+      color: colors.yellow,
+      actions: this.actions,
+      meta: 'Bakers home'
+    },
+    {
+      start: (new Date('August 5, 2019 19:00:00 -0600')),
+      end: (new Date('August 5, 2019 21:00:00 -0600')),
+      title: 'BMYC Officers Meeting ',
+      color: colors.yellow,
+      actions: this.actions,
+      meta: 'Bakers home'
+    },
+    {
+      start: (new Date('September 2, 2019 19:00:00 -0600')),
+      end: (new Date('September 2, 2019 21:00:00 -0600')),
+      title: 'BMYC Officers Meeting ',
+      color: colors.yellow,
+      actions: this.actions,
+      meta: 'Bakers home'
+    },
+    {
+      start: (new Date('May 26, 2019 13:30:00 -0600')),
+      end: (new Date('May 26, 2019 17:00:00 -0600')),
+      title: 'Opening Day - Sunday Club Races ',
+      color: colors.blue,
       actions: this.actions
-    }
+    },
+    {
+      start: (new Date('June 2, 2019 13:30:00 -0600')),
+      end: (new Date('June 2, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
+    {
+      start: (new Date('June 9, 2019 13:30:00 -0600')),
+      end: (new Date('June 9, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
+    {
+      start: (new Date('June 16, 2019 13:30:00 -0600')),
+      end: (new Date('June 16, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
+    {
+      start: (new Date('June 23, 2019 13:30:00 -0600')),
+      end: (new Date('June 23, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
+    {
+      start: (new Date('June 30, 2019 13:30:00 -0600')),
+      end: (new Date('June 30, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
+    {
+      start: (new Date('July 14, 2019 13:30:00 -0600')),
+      end: (new Date('July 14, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
+    {
+      start: (new Date('July 21, 2019 13:30:00 -0600')),
+      end: (new Date('July 21, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
+    {
+      start: (new Date('July 28, 2019 13:30:00 -0600')),
+      end: (new Date('July 28, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
+    {
+      start: (new Date('August 4, 2019 13:30:00 -0600')),
+      end: (new Date('August 4, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
+    {
+      start: (new Date('August 11, 2019 13:30:00 -0600')),
+      end: (new Date('August 11, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
+    {
+      start: (new Date('August 18, 2019 13:30:00 -0600')),
+      end: (new Date('August 18, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
+    {
+      start: (new Date('August 25, 2019 13:30:00 -0600')),
+      end: (new Date('August 25, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
+    {
+      start: (new Date('September 1, 2019 13:30:00 -0600')),
+      end: (new Date('September 1, 2019 17:00:00 -0600')),
+      title: 'Sunday Club Races ',
+      color: colors.blue,
+      actions: this.actions
+    },
   ];
 
   activeDayIsOpen: boolean = true;

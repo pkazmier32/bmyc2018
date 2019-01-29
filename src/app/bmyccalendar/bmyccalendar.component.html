@@ -13,9 +13,9 @@
       <pre>{{ modalData?.action }}</pre>
     </div> -->
     <div>
-      Event:
-      <pre>{{ modalData?.event | json }}</pre>
-      <pre>{{modalData?.event.start}}</pre>
+      <!-- <pre>{{ modalData?.event | json }}</pre> -->
+      <pre>Time: {{modalData?.event.start | date:'hh:mm a'}} - {{modalData?.event.end | date:'hh:mm a'}}</pre>
+      <pre>{{modalData?.event.meta}}</pre>
     </div>
   </div>
   <div class="modal-footer">
